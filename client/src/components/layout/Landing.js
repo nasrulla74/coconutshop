@@ -29,14 +29,14 @@ class Landing extends Component {
                   />
                   <div className="card-body">
                     <h3 className="card-title">
-                      Welcome to Coconut Guest Service at Ibrahim Nasir
-                      International Airport
+                      Welcome to Coconut Guest Service at Velana International
+                      Airport
                     </h3>
                     <p className="card-text">
-                      We provide guest services at Ibrahim Nasir International
-                      Airport for hotels, guest houses and safari boats. We have
-                      Airport Representatives with years of experience in
-                      handling customers from different nationalities to multi
+                      We provide guest services at Velana International Airport
+                      for hotels, guest houses and safari boats. We have Airport
+                      Representatives with years of experience in handling
+                      customers from different nationalities to multi
                       destinations around Maldives.
                     </p>
                   </div>
@@ -138,8 +138,8 @@ class Landing extends Component {
                         <span className="pl-3">Russian</span>
                       </li>
                       <li className="list-group-item">
-                        <i className="flag-icon flag-icon-sa" />
-                        <span className="pl-3">Arabic</span>
+                        <i className="flag-icon flag-icon-ch" />
+                        <span className="pl-3">Chinese</span>
                       </li>
                     </ul>
                   </div>
@@ -156,13 +156,13 @@ class Landing extends Component {
                   <div className="card-body">
                     <ul className="list-group">
                       <li className="list-group-item">
-                        Start with us today as your guest host at Ibrahim Nasir
+                        Start with us today as your guest host at Velana
                         International Airport with effordable packages and
                         prompt services.
                       </li>
                       <li className="list-group-item">
                         Contact us for more information!!.{" "}
-                        <h3>+(960) 980 9097</h3>
+                        <h3>+(960) 777 2081 | +(960) 980 9097</h3>
                       </li>
                     </ul>
                   </div>

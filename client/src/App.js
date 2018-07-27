@@ -63,103 +63,80 @@ class App extends Component {
             <Navbar />
             <Route exact path="/" component={Landing} />
             <div className="container">
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
-
               <Switch>
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute
                   exact
                   path="/register-admin-user"
                   component={RegisterAdminUser}
                 />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute
                   exact
                   path="/memberdashboard"
                   component={MemberDashboard}
                 />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute exact path="/profiles" component={Profiles} />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute
                   exact
                   path="/profile/:handle"
                   component={Profile}
                 />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute
                   exact
                   path="/register-member"
                   component={RegisterMember}
                 />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute
                   exact
                   path="/create-profile"
                   component={CreateProfile}
                 />
-              </Switch>
-              <Switch>
+
                 <PrivateRoute
                   exact
                   path="/edit-profile"
                   component={EditProfile}
                 />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute
                   exact
                   path="/add-experience"
                   component={AddExperience}
                 />
-              </Switch>
-              <Switch>
+
                 <PrivateRoute
                   exact
                   path="/add-education"
                   component={AddEducation}
                 />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute
                   exact
                   path="/create-booking"
                   component={CreateBooking}
                 />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute
                   exact
                   path="/edit-booking/:id"
                   component={EditBooking}
                 />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute exact path="/feed" component={Posts} />
-              </Switch>
 
-              <Switch>
                 <PrivateRoute exact path="/post/:id" component={Post} />
+
+                <Route component={NotFound} />
               </Switch>
-              <Route exact path="/not-found" component={NotFound} />
             </div>
             <Footer />
           </div>

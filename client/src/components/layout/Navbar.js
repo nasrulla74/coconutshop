@@ -16,6 +16,16 @@ class Navbar extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
+    let xdash;
+
+    if (user.usertype === "admin") {
+      xdash = "dashboard";
+    } else if (user.usertype === "member") {
+      xdash = "memberdashboard";
+    } else if (user.usertype === "super-admin") {
+      xdash = "dashboard";
+    }
+
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         {/* <li className="nav-item">
@@ -24,7 +34,7 @@ class Navbar extends Component {
           </Link>
         </li> */}
         <li className="nav-item">
-          <Link className="nav-link" to="/dashboard">
+          <Link className="nav-link" to={`/${xdash}`}>
             Dashboard
           </Link>
         </li>

@@ -19,13 +19,36 @@ class Login extends Component {
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      console.log(this.props);
+      if (this.props.auth.user.usertype === "member") {
+        this.props.history.push("/memberdashboard");
+      }
+
+      if (
+        this.props.auth.user.usertype === "admin" ||
+        this.props.auth.user.usertype === "super-admin"
+      ) {
+        this.props.history.push("/dashboard");
+      } else {
+        this.props.history.push("/");
+      }
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      if (nextProps.auth.user.usertype === "member") {
+        this.props.history.push("/memberdashboard");
+      }
+
+      if (
+        nextProps.auth.user.usertype === "admin" ||
+        nextProps.auth.user.usertype === "super-admin"
+      ) {
+        this.props.history.push("/dashboard");
+      } else {
+        this.props.history.push("/");
+      }
     }
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });

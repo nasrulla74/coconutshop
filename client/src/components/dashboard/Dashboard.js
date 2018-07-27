@@ -9,6 +9,7 @@ import {
 } from "../../actions/bookingActions";
 import Spinner from "../common/spinner";
 import BookingActions from "./BookingActions";
+
 import BookingDetails from "./BookingDetails";
 import DatePicker from "react-datepicker";
 import moment from "moment";
